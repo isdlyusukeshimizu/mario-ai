@@ -37,7 +37,7 @@
     $ source .venv/bin/activate
     ```
 
-
+### Client
 
 1. Install JDK (Amazon Corretto 22)
    - Download JDK from the following page
