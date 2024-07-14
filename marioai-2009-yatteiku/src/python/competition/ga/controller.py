@@ -1,6 +1,7 @@
 import numpy
 from ga.individual import Individual
 
+#2点交叉を変更して精度向上
 class Controller(object):
     @classmethod
     def select(cls, individuals, probabilities):
