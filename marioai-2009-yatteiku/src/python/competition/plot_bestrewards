@@ -1,0 +1,23 @@
+from google.colab import files
+import pickle
+import matplotlib.pyplot as plt
+
+# ファイルをアップロード
+uploaded = files.upload()
+
+# アップロードされたファイルを読み込む
+file_path = list(uploaded.keys())[0]
+
+with open(file_path, 'rb') as f:
+    best_rewards = pickle.load(f)
+
+# データの内容を確認
+print(f"Contents of {file_path}:")
+print(best_rewards)
+
+# データをプロットする
+plt.plot(best_rewards)
+plt.xlabel('Generation')
+plt.ylabel('Best Reward')
+plt.title('Best Reward Transition over Generations')
+plt.show()
